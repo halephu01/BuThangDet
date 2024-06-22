@@ -12,7 +12,7 @@ RUN chmod a+x node_modules/.bin/tsc
 
 COPY . .
 
-RUN npx tsc
+RUN sudo npx tsc
 
 CMD [ "node", "dist/index.js" ]
 
