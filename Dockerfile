@@ -7,12 +7,13 @@ WORKDIR /src/app
 COPY ./package*.json .
 
 RUN npm install
+RUN npm install -g typescript
 RUN chmod a+x node_modules/.bin/tsc
 
 
 COPY . .
 
-RUN sudo npx tsc
+RUN npx tsc
 
 CMD [ "node", "dist/index.js" ]
 
