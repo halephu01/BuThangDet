@@ -7,6 +7,8 @@ WORKDIR /src/app
 COPY ./package*.json .
 
 RUN npm install
+RUN chmod a+x node_modules/.bin/tsc
+
 
 COPY . .
 
