@@ -9,7 +9,7 @@ jobs:
   build:
     name: "Build and push image"
     env:
-        DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         ENV_FILE_CONTENT: ${{secrets.ENV_FILE_CONTENT}}
 
