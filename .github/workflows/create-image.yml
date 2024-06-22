@@ -35,5 +35,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: tiendat1011/DACN-Backend:latest
+          tags: tiendat1011/dacn-backend:latest
           file: ./Dockerfile
