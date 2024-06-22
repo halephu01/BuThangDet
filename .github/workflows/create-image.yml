@@ -37,5 +37,3 @@ jobs:
           push: true
           tags: tiendat1011/DACN-Backend:latest
           file: ./Dockerfile
-          build-args: 
-            ENV_FILE: .env

@@ -1,5 +1,7 @@
 FROM node:20.14-alpine
 
+COPY .env .env
+
 WORKDIR /src/app
 
 COPY ./package*.json .
