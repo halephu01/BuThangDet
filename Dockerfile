@@ -7,8 +7,10 @@ WORKDIR /src/app
 COPY ./package*.json .
 
 RUN npm install
-RUN npm i concurrently
-RUN npm i stripe
+RUN npm install -g typescript
+RUN chmod a+x node_modules/.bin/tsc
+RUN npm install concurrently
+RUN npm install stripe
 
 COPY . .
 
