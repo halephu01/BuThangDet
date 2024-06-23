@@ -19,3 +19,11 @@ RUN npx tsc
 CMD [ "npm", "run", "dev" ]
 
 EXPOSE 7000
+
+FROM caddy:2.6.2-alpine
+
+COPY ./Caddyfile /etc/caddy/Caddyfile
+
+EXPOSE 3000
+
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]
