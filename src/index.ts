@@ -20,7 +20,12 @@ cloudinary.config({
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://tuilaphu.id.vn',
+  optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
 
 app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
 
